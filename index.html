@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Cafés Peruanos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encuentra el Café Perfecto para Ti</h1>
+        <p>Responde algunas preguntas rápidas y descubre cuál es tu café ideal.</p>
+        
+        <form id="coffeeForm">
+            <!-- Pregunta 1: Momento del café -->
+            <div class="question">
+                <label>¿Cuándo sueles tomar café?</label><br>
+                <input type="radio" name="momento" value="mañana" required> Por la mañana<br>
+                <input type="radio" name="momento" value="tarde"> En la tarde<br>
+                <input type="radio" name="momento" value="noche"> Por la noche
+            </div>
+
+            <!-- Pregunta 2: Preferencias de sabor -->
+            <div class="question">
+                <label>¿Qué sabor prefieres en tu café?</label><br>
+                <input type="radio" name="sabor" value="chocolate" required> Chocolate y nueces<br>
+                <input type="radio" name="sabor" value="frutas_cítricas"> Frutas cítricas<br>
+                <input type="radio" name="sabor" value="flores"> Flores y frutos rojos
+            </div>
+
+            <!-- Pregunta 3: Acidez -->
+            <div class="question">
+                <label>¿Cómo te gusta la acidez de tu café?</label><br>
+                <input type="radio" name="acidez" value="baja" required> Baja<br>
+                <input type="radio" name="acidez" value="media"> Media<br>
+                <input type="radio" name="acidez" value="alta"> Alta
+            </div>
+
+            <!-- Botón de enviar -->
+            <button type="submit">Descubre tu Café</button>
+        </form>
+
+        <!-- Sección de resultados -->
+        <div id="resultados" class="resultados" style="display:none;">
+            <h2>Tu Café Recomendado</h2>
+            <p id="recomendacion"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
